@@ -1,1 +1,1 @@
-
+Hi everyone, this is Kaustubh and i have built Flixify which essentially is a clone of Netflix, i.e, a platform for streaming movies. The project is currently under development as i am looking to add some more features to it. Please drop any recommendations that you think might make the project better.
