@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>FLIXIFY</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    </head>
+    <body>
+        <h1>FLIXIFY</h1>
+        <form method="GET" action="/" class="search-form">
+            <input type="text" name="query" placeholder="Search movies..." value="{{ request.args.get('query', '') }}">
+            <button type="submit">Search</button>
+        </form>
+        <div class="movie-grid">
+            {% for movie in movies %}
+            <div class="movie-card">
+                <a href ="/movie/{{movie.id}}">
+                <img src="{{ url_for('static', filename='images/' + movie.image) }}" alt="{{ movie.title }}">
+                <h2>{{movie.title}}</h2>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </body>
+</html>

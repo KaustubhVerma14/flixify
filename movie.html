@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ movie.title }}</title> 
+        <link rel="stylesheet" href ="{{url_for('static',filename='style.css')}}">
+    </head>
+    <body>
+        <div class="movie-detail">
+            <img src="{{url_for('static',filename='images/'+movie.image)}}" alt="{{movie.title}}" width="350" height="415">
+            <h1>{{movie.title}}</h1>
+            <p>{{movie.description}}</p>
+            <iframe width="560" height="315" src="{{movie.trailer_url}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <br><br><a href="/"> Back to Home</a>
+        </div>
+    </body>
+</html>
